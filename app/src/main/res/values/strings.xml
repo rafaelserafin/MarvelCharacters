@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">"Marvel"</string>
+
+    <string name="url_marvel_base">https://gateway.marvel.com/v1/public</string>
+    <string name="marvel_public_key"></string>
+    <string name="marvel_private_key"></string>
+
+    <string name="hint_name">Name</string>
+    <string name="hint_comics">Comics</string>
+    <string name="hint_series">Series</string>
+    <string name="hint_events">Events</string>
+    <string name="hint_stories">Stories</string>
+    <string name="hint_limit">Limit</string>
+    <string name="btn_filter">Filter</string>
+    <string name="title_activity_detail_character">DetailCharacterActivity</string>
+
+    <string name="no_description_available">No description available</string>
+    <string name="description">Description</string>
+    <string name="activity_image_character">transtion_character</string>
+
+    <string name="sg_comics">Comics</string>
+    <string name="sg_events">Events</string>
+    <string name="sg_series">Series</string>
+    <string name="sg_stories">Stories</string>
+
+</resources>

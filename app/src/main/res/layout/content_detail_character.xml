@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rsddm.com.br.marvelcharacters.View.Activities.DetailCharacterActivity"
+    tools:showIn="@layout/activity_detail_character">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:id="@+id/textView" />
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_description_height"
+            android:padding="@dimen/small_padding"
+            android:layout_below="@+id/textView" />
+
+        <info.hoang8f.android.segmented.SegmentedGroup
+            xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sg_collections"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/medium_margin"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@+id/txt_description"
+            segmentedgroup:sc_border_width="1dp"
+            segmentedgroup:sc_corner_radius="@dimen/medium_margin">
+
+            <RadioButton
+                android:id="@+id/rdb_comics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sg_comics"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:checked="true"
+                style="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/rdb_events"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sg_events"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                style="@style/RadioButton" />
+
+
+            <RadioButton
+                android:id="@+id/rdb_series"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sg_series"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                style="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/rdb_stories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sg_stories"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                style="@style/RadioButton" />
+        </info.hoang8f.android.segmented.SegmentedGroup>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_collections"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sg_collections">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/not_available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/sg_collections"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="No items available"
+            android:textSize="@dimen/large_margin"/>
+
+    </RelativeLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
